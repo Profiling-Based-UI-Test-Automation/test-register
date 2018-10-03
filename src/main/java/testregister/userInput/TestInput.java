@@ -31,6 +31,8 @@ public class TestInput {
 	
 	private ObjectId tcId;
 	
+	private List<String> testDevices;
+	
 	
 	public TestInput(){
 
@@ -75,11 +77,19 @@ public class TestInput {
 	public void setTcId(ObjectId _tcId) {
 		this.tcId = _tcId;
 	}	
+
+	public List<String> getTestDevices() {
+		return testDevices;
+	}
+
+	public void setTestDevices(List<String> serials) {
+		this.testDevices = serials;
+	}	
 	
 	
 	@Override
 	public String toString() {
-		return "Test [ testName = " + testName + ", testDescription = " + testDescription + ", appId = " + appId   + ", apkId = " + apkId + ", tcId = " + tcId + "]";	
+		return "Test [ testName = " + testName + ", testDescription = " + testDescription + ", appId = " + appId   + ", apkId = " + apkId + ", tcId = " + tcId + ", devices = " + testDevices + "]";	
 	}
 
 }

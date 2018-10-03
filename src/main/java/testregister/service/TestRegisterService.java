@@ -44,6 +44,7 @@ public class TestRegisterService {
 			test.setTcId(info.getTcId());
 			test.setTestDescription(info.getTestDescription());
 			test.setTestName(info.getTestName());
+			test.setTestDevices(info.getTestDevices());
 			repository.save(test);
 		}
 	}
@@ -60,6 +61,7 @@ public class TestRegisterService {
 			testUpdated.setTcId(info.getTcId());
 			testUpdated.setTestDescription(info.getTestDescription());
 			testUpdated.setTestName(info.getTestName());
+			testUpdated.setTestDevices(info.getTestDevices());
 			repository.save(testUpdated);
 			
 			return true;

@@ -35,6 +35,8 @@ public class Test {
 	
 	private LocalDateTime registerDate;
 	
+	private List<String> testDevices;
+	
 	public Test(){
 		testId = UUID.randomUUID().toString();	
 		registerDate = LocalDateTime.now();
@@ -95,10 +97,18 @@ public class Test {
 		this.tcId = _tcId;
 	}	
 	
+	public List<String> getTestDevices() {
+		return testDevices;
+	}
+
+	public void setTestDevices(List<String> serials) {
+		this.testDevices = serials;
+	}	
+	
 	
 	@Override
 	public String toString() {
-		return "Test [ testId = " + testId + ", testName = " + testName + ", testDescription = " + testDescription + ", appId = " + appId   + ", apkId = " + apkId + ", tcId = " + tcId + ", registerDate = " + registerDate +  "]";	
+		return "Test [ testId = " + testId + ", testName = " + testName + ", testDescription = " + testDescription + ", appId = " + appId   + ", apkId = " + apkId + ", tcId = " + tcId + ", registerDate = " + registerDate + ", devices = " + testDevices +  "]";	
 	}
 
 }
