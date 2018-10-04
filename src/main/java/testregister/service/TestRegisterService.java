@@ -29,8 +29,8 @@ public class TestRegisterService {
 
 	public Test readTest(String testId) {
 		// TODO Auto-generated method stub
-		Test test = null;
-		test = repository.findByTestId(testId);
+		//Test test = null;
+		Test test = repository.findByTestId(testId);
 		return test;
 	}
 
@@ -51,8 +51,8 @@ public class TestRegisterService {
 
 	public boolean updateTest(String testId, TestInput info) {
 		// TODO Auto-generated method stub
-		Test test = null;
-		test = repository.findByTestId(testId);
+		
+		Test test = repository.findByTestId(testId);
 		
 		if(test != null) {
 			Test testUpdated = new Test();
@@ -72,8 +72,8 @@ public class TestRegisterService {
 
 	public void deleteTest(String testId) {
 		// TODO Auto-generated method stub
-		Test test = null;
-		test = repository.findByTestId(testId);
+		//Test test = null;
+		Test test = repository.findByTestId(testId);
 		
 		if(test != null) {
 			repository.deleteByTestId(testId);
